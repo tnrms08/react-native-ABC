@@ -1,11 +1,12 @@
-import { useNavigation } from '@react-navigation/core'
-import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { auth } from '../firebase'
+import { useNavigation } from '@react-navigation/core';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { auth } from '../firebase';
 
 const SigninScreen = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [passwordCheck, setPasswordCheck]=useState('')
 
     const navigation = useNavigation()
 
@@ -58,15 +59,16 @@ const SigninScreen = () => {
           style={styles.input}
           secureTextEntry
         />
+        {/*
         <TextInput
           placeholder="비밀번호 확인"
-          value={password}
-          onChangeText={text => setPassword(text)}
+          value={passwordCheck}
+          onChangeText={text => setPasswordCheck(text)}
           style={styles.input}
           secureTextEntry
         />
+    */}
       </View>
-
       <View style={styles.buttonContainer}>
         <TouchableOpacity
             onPress={handleSignUp}

@@ -1,9 +1,11 @@
-import { useNavigation } from '@react-navigation/core'
-import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { auth } from '../firebase'
+import { useNavigation } from '@react-navigation/core';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { auth } from '../firebase';
+import SigninScreen from './SigninScreen';
 
-const LoginScreen = () => {
+
+const LoginScreen = ({}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -62,7 +64,8 @@ const LoginScreen = () => {
             </View>
             <View style={styles.buttonContainer}>
                 <TouchableOpacity
-                    onPress={handleSignUp}
+                    //onPress={handleSignUp}
+                    onPress={()=>navigation.navigate('로그인')}
                     style={[styles.button, styles.buttonOutline]}
                     >
                     <Text style={styles.buttonOutlineText}>회원가입</Text>
