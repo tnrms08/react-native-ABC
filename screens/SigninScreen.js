@@ -71,7 +71,7 @@ const SigninScreen = () => {
     )
 }
 
-export default SigninScreen
+export default SigninScreen;
 
 const styles = StyleSheet.create({
   container: {

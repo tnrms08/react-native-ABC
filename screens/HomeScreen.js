@@ -1,25 +1,27 @@
 import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from '@react-navigation/native';
+import TopTab from '../TopTab';
+
+
+const Tab = createBottomTabNavigator();
 
 const HomeScreen = () => {
-
-    const navigation = useNavigation()
-
-    return (
-      <View style={styles.container}>
-        <Text>Home</Text>
-      </View>
-      )
-}
-
-
-export default HomeScreen
+  return (
+    <View style={styles.container}>
+      <TopTab />
+    </View>
+      
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'white',
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
   },
 })
+
+export default HomeScreen;
