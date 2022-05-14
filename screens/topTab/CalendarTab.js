@@ -1,23 +1,20 @@
 import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Calendar } from 'react-native-calendars';
+import { useState } from 'react/cjs/react.production.min';
 
 const CalendarTab = () => {
-
-    const navigation = useNavigation()
-
-    return (
-      <View style={styles.container}>
-        <Text>Calendar</Text>
-      </View>
-      )
+  return (
+    <Calendar style={styles.calendar}/>
+    
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+  calendar: {
+    height:"100%"
+    font
   },
 })
 
