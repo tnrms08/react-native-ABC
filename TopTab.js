@@ -10,7 +10,6 @@ import SettingTab from './screens/bottomTab/SettingTab';
 import { FontAwesome5 } from '@expo/vector-icons';;
 import { Ionicons } from '@expo/vector-icons';
 
-
 const TopTab = () => {
 
     const Tab = createBottomTabNavigator();
@@ -57,7 +56,7 @@ const TopTab = () => {
                   <Ionicons name="settings-sharp" size={24} color="#e9664e" /> ) : (
                   <Ionicons name="settings-sharp" size={24} color="gray" /> )
             }}
-            />
+           />
         </Tab.Navigator>
       );
 }

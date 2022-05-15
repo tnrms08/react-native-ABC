@@ -14,7 +14,6 @@ const CalendarTab = () => {
 const styles = StyleSheet.create({
   calendar: {
     height:"100%"
-    font
   },
 })
 
