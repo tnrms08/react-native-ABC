@@ -20,6 +20,8 @@ const Logout = () => {
       <View style={styles.container}>
         <Text style={styles.text}>계정 : {auth.currentUser?.email}</Text>
         <Text></Text>
+        <Text>로그아웃을 원하시면 하단의 버튼을 눌러주세요</Text>
+        <Text>바로 로그아웃이 진행됩니다.</Text>
         <TouchableOpacity
           onPress={handleSignOut}
           style={styles.button}
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
   },
    button: {
     backgroundColor: '#e9664e',
-    width: '60%',
+    width: '50%',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
