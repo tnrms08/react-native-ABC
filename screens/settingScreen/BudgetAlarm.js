@@ -9,7 +9,7 @@ const BudgetAlarm = () => {
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
-    const percent=["10%",'20%','30%','40%','50%','60%','70%','80%',"90"]
+    const percent=["10%",'20%','30%','40%','50%','60%','70%','80%',"90%"]
 
     return (
       <View style={styles.container}>
@@ -41,6 +41,7 @@ const BudgetAlarm = () => {
               rowTextForSelection={(item, index) => {
                 return item
               }}
+              defaultButtonText="선택"
             />
           </View>
         </View>

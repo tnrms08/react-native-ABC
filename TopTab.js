@@ -16,7 +16,17 @@ const TopTab = () => {
 
     return (
         <Tab.Navigator 
-          initialRouteName='가계부' screenOptions={{headerShown: false}}>
+          initialRouteName='가계부'
+          screenOptions={{
+            headerShown: false,
+            tabBarIndicatorStyle:
+            {
+              backgroundColor: '#e9664e' 
+            },
+            
+            tabBarActiveTintColor:"#e9664e"
+          }}
+        >
           <Tab.Screen
             name="가계부"
             component={HomeTab}

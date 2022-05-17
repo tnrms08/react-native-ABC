@@ -13,7 +13,15 @@ const HomeTab = () => {
     const Tab = createMaterialTopTabNavigator();
 
     return (
-      <Tab.Navigator style={styles.tobTab}>
+      <Tab.Navigator 
+        style={styles.tobTab}
+        screenOptions={{
+          tabBarIndicatorStyle:
+          {
+            backgroundColor: '#e9664e' 
+          }
+        }}
+        >
         <Tab.Screen name="일별" component={DayTab} />
         <Tab.Screen name="월별" component={MonthTab} />
         <Tab.Screen name="달력" component={CalendarTab} />

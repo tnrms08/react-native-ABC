@@ -1,15 +1,12 @@
 import { useNavigation } from '@react-navigation/core';
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Switch } from 'react-native';
-import SelectDropdown from 'react-native-select-dropdown';
+import { StyleSheet, Text, TouchableOpacity, View, Switch, Pressable } from 'react-native';
 
 const BudgetAlarm = () => {
 
     const navigation = useNavigation()
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
-    const percent=["10%",'20%','30%','40%','50%','60%','70%','80%',"90"]
 
     return (
       <View style={styles.container}>
@@ -26,10 +23,7 @@ const BudgetAlarm = () => {
           />
           <Text style={{fontSize:20, paddingLeft: 5, paddingRight:45}}>Off</Text>
         </View>
-
-        <View style={{flexDirection: 'row', marginBottom:60}}>
-          <Text>Time Select</Text>
-        </View>
+        
       </View>
       )
 }

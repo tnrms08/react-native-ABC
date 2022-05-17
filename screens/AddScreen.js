@@ -12,7 +12,14 @@ const AddScreen = () => {
     const Tab = createMaterialTopTabNavigator();
 
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+        screenOptions={{
+            tabBarIndicatorStyle:
+            {
+              backgroundColor: '#e9664e' 
+            }
+          }}
+        >
             <Tab.Screen name="수입" component={IncomeTab} />
             <Tab.Screen name="지출" component={ExpenseTab} />
             <Tab.Screen name="이체" component={TransferTab} />
