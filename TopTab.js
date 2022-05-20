@@ -18,7 +18,7 @@ const TopTab = () => {
         <Tab.Navigator 
           initialRouteName='가계부'
           screenOptions={{
-            headerShown: false,
+            //headerShown: false,
             tabBarIndicatorStyle:
             {
               backgroundColor: '#e9664e' 
@@ -34,7 +34,8 @@ const TopTab = () => {
               tabBarIcon: ({focused}) =>
                 focused ? (
                   <Ionicons name="home" size={24} color="#e9664e" /> ) : (
-                  <Ionicons name="home" size={24} color="gray" /> )
+                  <Ionicons name="home" size={24} color="gray" /> ),
+              headerTitle:' '
             }}
             />
           <Tab.Screen
@@ -44,7 +45,8 @@ const TopTab = () => {
             tabBarIcon: ({focused}) =>
               focused ? (
                 <Ionicons name="stats-chart" size={24} color="#e9664e" /> ) : (
-                <Ionicons name="stats-chart" size={24} color="gray" /> )
+                <Ionicons name="stats-chart" size={24} color="gray" /> ),
+                headerShown:false
           }}
           />
           <Tab.Screen
@@ -54,7 +56,8 @@ const TopTab = () => {
               tabBarIcon: ({focused}) =>
                 focused ? (
                   <FontAwesome5 name="coins" size={24} color="#e9664e" /> ) : (
-                  <FontAwesome5 name="coins" size={24} color="gray" /> )
+                  <FontAwesome5 name="coins" size={24} color="gray" /> ),
+                  headerShown:false
             }}
             />
           <Tab.Screen 
@@ -64,7 +67,8 @@ const TopTab = () => {
               tabBarIcon: ({focused}) =>
                 focused ? (
                   <Ionicons name="settings-sharp" size={24} color="#e9664e" /> ) : (
-                  <Ionicons name="settings-sharp" size={24} color="gray" /> )
+                  <Ionicons name="settings-sharp" size={24} color="gray" /> ),
+                headerShown:false
             }}
            />
         </Tab.Navigator>

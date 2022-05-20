@@ -26,11 +26,11 @@ const DayTab = () => {
       <View style={styles.container}>
         <WeeklyCalendar
           events={sampleEvents}
-          style={{ height: "100%"}}
+          style={{ height:"100%" }}
           startWeekday={1}
           locale='ko'
           themeColor={'#e9664e'}
-          titleStyle={{color: "#e9664e", padding:20, fontSize:20}}
+          titleStyle={{color: "#e9664e", padding:10, fontSize:20}}
         />
         <FAB
           color='#e9664e'
@@ -44,9 +44,9 @@ const DayTab = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0,
+    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 })
 

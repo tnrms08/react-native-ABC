@@ -1,20 +1,34 @@
 import { useNavigation } from '@react-navigation/core';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import DayTab from '../topTab/DayTab'
 import MonthTab from '../topTab/MonthTab'
 import CalendarTab from '../topTab/CalendarTab'
 import BudgetTab from '../topTab/BudgetTab'
+
+import { Ionicons } from '@expo/vector-icons';
 
 const HomeTab = () => {
 
     const navigation = useNavigation()
     const Tab = createMaterialTopTabNavigator();
 
+
+    React.useLayoutEffect(() => {
+      navigation.setOptions({
+        headerRight: ()=>
+          <View style={{flexDirection:"row"}}>
+            <Ionicons name="mail" size={35} color="#e9664e" style={{paddingHorizontal:10}} onPress={()=>navigation.navigate('메시지')}/>
+            <Ionicons name="person-circle" size={35} color="#e9664e" style={{paddingHorizontal:10}} onPress={()=>navigation.navigate('계정정보')}/>
+          </View>
+      });
+    }, []);
+
+
     return (
+
       <Tab.Navigator 
-        style={styles.tobTab}
         screenOptions={{
           tabBarIndicatorStyle:
           {
@@ -36,9 +50,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  tobTab: {
-    paddingTop: 35
-  }
 })
 
 export default HomeTab;

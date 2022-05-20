@@ -12,6 +12,8 @@ import AccountDelete from "./screens/settingScreen/AccountDelete";
 import BudgetAlarm from "./screens/settingScreen/BudgetAlarm";
 import Alarm from "./screens/settingScreen/Alarm";
 import LoginScreen from "./screens/LoginScreen";
+import MessageScreen from "./screens/bottomTab/MessageScreen";
+import SettingTab from "./screens/bottomTab/SettingTab";
 
 const Nav = createNativeStackNavigator();
 
@@ -30,6 +32,8 @@ const Root = () => {
             <Nav.Screen options={{headerTitle:"이전"}} name="예산알람" component={BudgetAlarm}/>
             <Nav.Screen options={{headerTitle:"이전"}} name="가계부 작성 알람" component={Alarm}/>
             <Nav.Screen options={{ headerShown: false }} name="Login" component={LoginScreen} />
+            <Nav.Screen options={{headerTitle:"이전"}} name="메시지"  component={MessageScreen}/>
+            <Nav.Screen options={{headerTitle:"이전"}} name="계정정보"  component={SettingTab}/>
 
 
         </Nav.Navigator>
