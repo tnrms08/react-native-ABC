@@ -30,13 +30,16 @@ const IncomeTab = () => {
         hideDatePicker();
     };
 
+
     return (
       <View style={styles.container}>
 
         <View style={{flexDirection: 'row', marginBottom:20, marginTop:50}}>
           <Text style={{paddingRight: 25, fontSize:20, paddingTop:10}}>날짜</Text>
           <View style={{paddingHorizontal:65}}>
-            <Button title="날짜 선택" onPress={showDatePicker} />
+            <TouchableOpacity onPress={showDatePicker}>
+              <Text style={{fontSize:20, paddingTop:10, color:'grey'}}>날짜 선택</Text>
+            </TouchableOpacity>
             <DateTimePicker
               isVisible={isDatePickerVisible}
               mode="date"
@@ -61,6 +64,8 @@ const IncomeTab = () => {
                 return item
               }}
               defaultButtonText="선택"
+              buttonStyle={{backgroundColor:'white'}}
+              buttonTextStyle={{color:'grey'}}
             />
           </View>
         </View>
@@ -80,6 +85,8 @@ const IncomeTab = () => {
                 return item
               }}
               defaultButtonText="선택"
+              buttonStyle={{backgroundColor:'white'}}
+              buttonTextStyle={{color:'grey'}}
             />
           </View>
         </View>
@@ -90,7 +97,7 @@ const IncomeTab = () => {
             <TextInput
               placeholder='금액 입력'
               onChangeText={text=>setMoney(text)}
-              style={{fontSize:20, paddingRight:70}}
+              style={{fontSize:20, paddingRight:70, paddingTop:10}}
             />
           </View>
         </View>
@@ -101,7 +108,7 @@ const IncomeTab = () => {
             <TextInput
               placeholder='내용 입력'
               onChangeText={text=>setMoney(text)}
-              style={{fontSize:20, paddingRight:70}}
+              style={{fontSize:20, paddingRight:70, paddingTop:10}}
             />
           </View>
         </View>
@@ -119,7 +126,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 2,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor:'white'
   },
   button: {
     backgroundColor: '#e9664e',
