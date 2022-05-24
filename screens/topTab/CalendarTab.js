@@ -31,10 +31,6 @@ const CalendarTab = () => {
         '2022-05-20': {selected: true, marked: true, selectedColor: 'red'}
       }}
       theme={{
-        backgroundColor: '#ffffff',
-        calendarBackground: '#ffffff',
-        textSectionTitleColor: '#b6c1cd',
-        textSectionTitleDisabledColor: '#d9e1e8',
         selectedDayBackgroundColor: '#00adf5',
         selectedDayTextColor: '#ffffff',
         todayTextColor: '#e9664e',

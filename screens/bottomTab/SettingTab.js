@@ -11,7 +11,7 @@ const SettingTab = () => {
 
     return (
       <View style={styles.container}>
-        <View style={{flexDirection: 'row', paddingRight:'30%', paddingBottom:"7%"}}>
+        <View style={{flexDirection: 'row', paddingRight:'30%', paddingBottom:"7%", marginTop:50}}>
           <Ionicons name="person" size={70} color="#e9664e" />
           <Text style={{fontSize: 15, paddingLeft:30, paddingTop: 40}}>{auth.currentUser?.email}</Text>
         </View>
@@ -52,12 +52,12 @@ const SettingTab = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor:'white'
   },
   list: {
-    width: '100%'
+    width: '100%',
   },
   text: {
     width: "100%",
