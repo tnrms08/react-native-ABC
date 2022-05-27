@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native';
 //import { Calendar, Agenda } from 'react-native-calendars';
 import { useState } from 'react/cjs/react.production.min';
 
@@ -18,12 +18,33 @@ LocaleConfig.defaultLocale = 'fr';
 
 const CalendarTab = () => {
 
+  const createThreeButtonAlert = () =>
+  Alert.alert(
+    "소비상태 선택",
+    "해당 날짜의 소비 상태를 선택하세요.",
+    [
+      {
+        text: "상",
+        onPress: () => console.log("green")
+      },
+      {
+        text: "중",
+        onPress: () => console.log("yello")
+      },
+      { 
+        text: "하",
+        onPress: () => console.log("red") 
+      }
+    ],
+    { cancelable: false }
+  );
+
   return (
     <Calendar 
       style={styles.calendar}
       onDayPress={day => {
         console.log('selected day', day);
-      }}
+      }, createThreeButtonAlert}
       markingType={'multi-dot'}
       markedDates={{
         '2022-05-18': {selected: true, marked: true, selectedColor: '#006400'},

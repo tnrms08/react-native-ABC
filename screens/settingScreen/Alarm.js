@@ -1,8 +1,28 @@
 import { useNavigation } from '@react-navigation/core';
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Switch, Pressable } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Switch, Pressable, Button } from 'react-native';
 
-const BudgetAlarm = () => {
+import DateTimePickerModal from "react-native-modal-datetime-picker";
+
+
+const Alarm = () => {
+
+
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+
+  const showDatePicker = () => {
+    setDatePickerVisibility(true);
+  };
+
+  const hideDatePicker = () => {
+    setDatePickerVisibility(false);
+  };
+
+  const handleConfirm = (date) => {
+    console.warn("A date has been picked: ", date);
+    hideDatePicker();
+  };
+
 
     const navigation = useNavigation()
     const [isEnabled, setIsEnabled] = useState(false);
@@ -24,6 +44,24 @@ const BudgetAlarm = () => {
           <Text style={{fontSize:20, paddingLeft: 5, paddingRight:45}}>Off</Text>
         </View>
         
+
+        <View style={{flexDirection: 'row', marginBottom:20, marginTop:10}}>
+          <Text style={{paddingRight: 25, fontSize:20, paddingTop:10}}>시간</Text>
+          <View style={{paddingHorizontal:65}}>
+            <TouchableOpacity onPress={showDatePicker}>
+              <Text style={{fontSize:20, paddingTop:10, color:'grey'}}>시간 선택</Text>
+            </TouchableOpacity>
+            <DateTimePickerModal
+              isVisible={isDatePickerVisible}
+              mode="time"
+              onConfirm={handleConfirm}
+              onCancel={hideDatePicker}
+            />
+          </View>
+        </View>
+
+
+
       </View>
       )
 }
@@ -36,4 +74,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default BudgetAlarm;
+export default Alarm;

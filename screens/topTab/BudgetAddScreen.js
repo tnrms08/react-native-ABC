@@ -72,11 +72,11 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 10,
         alignItems: 'center',
-        marginHorizontal: 5
+        marginHorizontal: 5,
       },
       buttonOutline: {
         backgroundColor: '#e9664e',
-        marginTop: 5,
+        marginTop: 100,
         borderColor: '#e9664e',
         borderWidth: 2,
       },
