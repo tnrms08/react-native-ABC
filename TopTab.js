@@ -46,7 +46,7 @@ const TopTab = () => {
               focused ? (
                 <Ionicons name="stats-chart" size={24} color="#e9664e" /> ) : (
                 <Ionicons name="stats-chart" size={24} color="gray" /> ),
-                headerShown:false
+                headerTitle:' '
           }}
           />
           <Tab.Screen
@@ -57,7 +57,7 @@ const TopTab = () => {
                 focused ? (
                   <FontAwesome5 name="coins" size={24} color="#e9664e" /> ) : (
                   <FontAwesome5 name="coins" size={24} color="gray" /> ),
-                  headerShown:false
+                  headerTitle:' '
             }}
             />
           <Tab.Screen 

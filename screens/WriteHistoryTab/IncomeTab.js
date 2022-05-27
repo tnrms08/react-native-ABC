@@ -12,8 +12,7 @@ const IncomeTab = () => {
     const bank=["농협","하나","카카오뱅크","신한","우리","현금"]
     const item=["용돈","장학금","이자","더치페이","기타"]
 
-    const [money,setMoney]=useState('')
-;
+    const [money,setMoney]=useState('');
 
     const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
